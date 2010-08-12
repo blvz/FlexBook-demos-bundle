@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:filters="flash.filters.*"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+               xmlns:rs="com.rubenswieringa.book.*"
+               backgroundColor="#333333" 
+               creationComplete="init()">
+	
+	<fx:Script>
+		
+		<![CDATA[
+			import mx.controls.Image;
+			import com.rubenswieringa.book.Page;
+			import com.rubenswieringa.book.Book;
+			import mx.rpc.events.XMLLoadEvent;
+			import mx.rpc.xml.XMLLoader;
+			
+			public var myBook : Book;
+			
+			private function init() : void {
+				loadXML();
+			}
+			
+			private function loadXML() : void {
+				var loader : XMLLoader = new XMLLoader();
+				loader.load("data.xml");
+				loader.addEventListener(XMLLoadEvent.LOAD, onXMLLoad);
+			}
+			
+			private function onXMLLoad(event : XMLLoadEvent) : void {
+				buildBookFromXML(event.xml);
+			}
+			
+			private function buildBookFromXML(xml : XML) : void {
+				if (myBook)
+					this.removeElement(myBook);
+				
+				myBook = new Book();
+				myBook.left = 50;
+				myBook.top = 50;
+				myBook.width = 800;
+				myBook.height = 530;
+				
+				var pagesLen : int = xml.pages.page.length();
+				for (var i : int = 0; i < pagesLen; i++) {
+					var page : Page = new Page();
+					
+					var image : XML = xml.pages.page.image[i];
+					var mxImage : Image = new Image();
+					mxImage.source = image.@source;
+					
+					page.addChild(mxImage);
+					myBook.addChild(page);
+				}
+				
+				addElement(myBook);
+				numPages = pagesLen - 1;
+			}
+			
+			[Bindable]
+			private var numPages : int;
+			
+		]]>
+		
+	</fx:Script>
+	
+	<s:HGroup left="50" top="630">
+		<s:NumericStepper id="stepper" minimum="0" maximum="{numPages}" />
+		<s:Button click="{myBook.gotoPage(stepper.value);}" label="gotoPage" />
+		<s:Button click="{myBook.jumpToPage(stepper.value);}" label="jumpToPage" />
+	</s:HGroup>
+	
+</s:Application>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<pages>
+		<page>
+			<image source="img/sumeco/dreamscan.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/renaissance.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/renaissance_zoom.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/hollywood.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/backstabber_blue1.png" />
+		</page>
+		<page>
+			<image source="img/sumeco/backstabber_blue2.png" />
+		</page>
+		<page>
+			<image source="img/sumeco/backstabber_green1.png" />
+		</page>
+		<page>
+			<image source="img/sumeco/backstabber_green2.png" />
+		</page>
+		<page>
+			<image source="img/sumeco/backstabber.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/mother1.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/relation1.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/relation2.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/mother2.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/formula.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/baken.swf" live="true" />
+		</page>
+		<page>
+			<image source="img/sumeco/desktopography1.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/mode1.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/mode2.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/desktopography2.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/ontwerpje1.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/ontwerpje2.jpg" />
+		</page>
+		<page>
+			<image source="img/sumeco/nights.jpg" />
+		</page>
+	</pages>
+</data>
