@@ -1,7 +1,7 @@
 # FlexBook Demos Bundle #
 
 Bundle of demos for the FlexBook project.
-See <http://github.com/rthesaint/FlexBook> for more info.
+See <http://github.com/blvs/FlexBook> for more info.
 
 
 ## basicDemoFlex4
